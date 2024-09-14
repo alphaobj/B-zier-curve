@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贝塞尔曲线动画</title>
+    <style>
+        .container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .moving-image {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+           background: #000;
+           margin-top: -10px;
+           margin-left: -10px;;
+        }
+
+        .coordinate {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* z-index: -1; */
+            /* 使 canvas 在其他元素下层 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="pathCanvas"></canvas>
+        <div class="moving-image"></div>
+        <div class="coordinate" id="coordinate"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
